@@ -14,7 +14,7 @@ public class MinutesController {
 		
 		System.out.println("exercise: " + exercise.getMinutes());
 		
-		return "addMinutes.html";
+		return "addMinutes";
 	}
 	
 //	@RequestMapping(value = "/addMoreMinutes")
