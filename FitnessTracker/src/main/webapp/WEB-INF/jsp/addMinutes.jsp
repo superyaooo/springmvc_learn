@@ -7,6 +7,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Add Minutes</title>
+
+<style>
+	.error {
+		color: #ff0000;
+	}
+	
+	.errorBlock {
+		color: #000;
+		background-color: #ffeeee;
+		border: 3px solid #ff0000;
+		padding: 8px;
+		margin: 16px;
+	}
+</style>
+
 </head>
 <body>
 	<h1>Add Minutes Exercised</h1>
@@ -14,13 +29,15 @@
 	Language : <a href="?language=en">English</a> | <a href="?language=es">Spanish</a>
 	
 	<form:form commandName="exercise">
+		<form:errors path="*" cssClass="errorBlock" element="div" />
 		<table>
 			<tr>
 				<td><spring:message code="goal.text" /></td>
 				<td><form:input path="minutes"/></td>
+				<td><form:errors path="minutes" cssClass="error"/></td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td colspan="3">
 					<input type="submit" value="Enter Exercise"/>
 				</td>
 			</tr>
